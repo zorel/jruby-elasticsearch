@@ -15,7 +15,6 @@ class ElasticSearch::Client
   # :cluster => "clustername" - the cluster name to use
   def initialize(options={})
     builder = org.elasticsearch.node.NodeBuilder.nodeBuilder
-    builder.client(true)
 
     # The client doesn't need to serve http
     builder.settings.put("http.enabled", false)
